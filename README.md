@@ -7,7 +7,7 @@
             - 실습 환경 준비
                 - vs  code 설치
                 - vs code 와 git 연동
-                    - 
+                    - https://github.com/CJYjob/Egoing-WEB1-HTML-Internet.git
             - 코딩 실습
                 1. 1.html 파일 생성
                 2. `hello world` 입력 및 저장
