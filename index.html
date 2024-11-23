@@ -37,6 +37,34 @@
             }
         }
     </style>
+    <script>
+        function nightDayHandler(self){
+            var target =document.querySelector('body')
+            if (self.value === 'Night') {
+                self.value = 'Day';
+                element = target.style.backgroundColor = 'black';
+                element = target.style.color = 'white';
+
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length) {
+                    alist[i].style.color = 'powderblue';
+                    i = i + 1;
+                }
+            } else {
+                self.value = 'Night';
+                element = target.style.backgroundColor = 'white';
+                element = target.style.color = 'black';
+
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length) {
+                    alist[i].style.color = 'blue';
+                    i = i + 1;
+                }
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -59,32 +87,7 @@
         <strong>연습중</strong>입니다.<br>
         </p>
 
-        <input type="button" value="Night" onclick="
-            var target =document.querySelector('body')
-            if (this.value === 'Night') {
-                this.value = 'Day';
-                element = target.style.backgroundColor = 'black';
-                element = target.style.color = 'white';
-
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while(i < alist.length) {
-                    alist[i].style.color = 'powderblue';
-                    i = i + 1;
-                }
-            } else {
-                this.value = 'Night';
-                element = target.style.backgroundColor = 'white';
-                element = target.style.color = 'black';
-                
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while(i < alist.length) {
-                    alist[i].style.color = 'blue';
-                    i = i + 1;
-                }
-            }
-        ">
+        <input type="button" value="Night" onclick="nightDayHandler(this)">
     </div>
 </body>
 </html>
