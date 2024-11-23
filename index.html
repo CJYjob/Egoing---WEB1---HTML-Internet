@@ -38,30 +38,36 @@
         }
     </style>
     <script>
+        var Body = {
+            setColor:function (color) {
+                document.querySelector('body').style.color = color;
+            },
+            setBackgroundColor:function (color) {
+                document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+        var Links = {
+            setColor:function (color) {
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length) {
+                    alist[i].style.color = color;
+                    i = i + 1;
+                }
+            }
+        }
         function nightDayHandler(self){
             var target =document.querySelector('body')
             if (self.value === 'Night') {
                 self.value = 'Day';
-                element = target.style.backgroundColor = 'black';
-                element = target.style.color = 'white';
-
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while(i < alist.length) {
-                    alist[i].style.color = 'powderblue';
-                    i = i + 1;
-                }
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
+                Links.setColor('powderblue');
             } else {
                 self.value = 'Night';
-                element = target.style.backgroundColor = 'white';
-                element = target.style.color = 'black';
-
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while(i < alist.length) {
-                    alist[i].style.color = 'blue';
-                    i = i + 1;
-                }
+                Body.setBackgroundColor('white');
+                Body.setColor('black');
+                Links.setColor('blue');
             }
         }
     </script>
