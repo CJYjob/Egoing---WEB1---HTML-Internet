@@ -4,24 +4,24 @@ h1{
             border-bottom: 5px solid gray;
             margin:0px;
             padding:20px;
-        }
-        li {
+}
+li {
             color:green;
             border-right: 10px solid grey;
             margin:0;
             padding:20px;
-        }
-        .ol {
+}
+.ol {
             color:greenyellow;
             margin:20px;
             padding: 0px;
             border-left: 20px solid goldenrod;
             border-right: 5px solid grey;
-        }
-        #JS {
+}
+#JS {
             color:grey
-        }
-        @media(min-width:400px){
+}
+@media(min-width:400px){
             #grid {
                 border: 5px solid pink;
                 display:grid;
@@ -29,4 +29,4 @@ h1{
                 /*fr은 그리드를 분할하는 Frame을 의미한다. 
                 2fr 1fr은 전체를 3으로 나눠 2:1로 나눠 표시한다.*/
             }
-        }
+}
