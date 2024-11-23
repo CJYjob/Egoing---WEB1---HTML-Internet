@@ -16,7 +16,7 @@ var Links = {
         //     alist[i].style.color = color;
         //     i = i + 1;
         // }
-        #('a').css('color', color);
+        $('a').css('color', color);
     }
 }
 function nightDayHandler(self){
