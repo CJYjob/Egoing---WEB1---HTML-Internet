@@ -59,13 +59,16 @@
         <strong>연습중</strong>입니다.<br>
         </p>
 
-        <input type="button" value="night" onclick="
-            element = document.querySelector('body').style.backgroundColor = 'black'
-            element = document.querySelector('p').style.color = 'white'
-        ">
-        <input type="button" value="day" onclick="
-            element = document.querySelector('body').style.backgroundColor = 'white'
-            element = document.querySelector('p').style.color = 'black'
+        <input id="mode" type="button" value="Night" onclick="
+            if (document.querySelector('#mode').value === 'Night') {
+                document.querySelector('#mode').value = 'Day';
+                element = document.querySelector('body').style.backgroundColor = 'black';
+                element = document.querySelector('p').style.color = 'white';
+            } else {
+                document.querySelector('#mode').value = 'Night';
+                element = document.querySelector('body').style.backgroundColor = 'white';
+                element = document.querySelector('p').style.color = 'black';
+            }
         ">
     </div>
 </body>
